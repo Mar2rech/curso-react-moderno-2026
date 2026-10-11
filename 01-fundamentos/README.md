@@ -4,32 +4,68 @@
 
 Crear el primer proyecto moderno con Vite y React 19.3, entender la estructura básica y renderizar el primer componente.
 
-## Requisitos
+## Instalación básica (paso a paso)
 
-- Node.js 20.19+ (recomendado 22+)
-- npm (o pnpm / bun)
+### 1. Instalar Node.js
 
-## Cómo empezar
+Necesitas **Node.js 20.19 o superior** (recomendado 22 LTS).
 
-### Opción recomendada (desde cero)
+- Ve a [https://nodejs.org](https://nodejs.org)
+- Descarga la versión **LTS** (Long Term Support)
+- Instálala (en Windows/Mac se instala con el instalador; en Linux puedes usar nvm o el gestor de paquetes)
+
+**Verifica que se instaló correctamente:**
+
+```bash
+node --version
+npm --version
+```
+
+Deberías ver algo como `v22.x.x` y una versión de npm.
+
+### 2. Crear el proyecto (recomendado)
+
+Abre una terminal y ejecuta:
 
 ```bash
 npm create vite@latest mi-app-react -- --template react
+```
+
+Sigue las instrucciones (acepta las opciones por defecto si no sabes qué elegir).
+
+Luego:
+
+```bash
 cd mi-app-react
 npm install
 npm run dev
 ```
 
-### Usando los archivos de este módulo
+Abre el navegador en la URL que te indique (normalmente `http://localhost:5173`).
 
-1. Copia la carpeta `01-fundamentos` o clona el repo.
-2. Entra en la carpeta del proyecto (cuando añadamos los archivos base).
-3. Ejecuta:
+### 3. Alternativa: usar los archivos de este repositorio
 
-```bash
-npm install
-npm run dev
-```
+Si prefieres usar los archivos que ya están en `01-fundamentos/`:
+
+1. Clona el repositorio o descarga la carpeta `01-fundamentos`.
+2. Entra en la carpeta:
+   ```bash
+   cd 01-fundamentos
+   ```
+3. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+4. Arranca el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+
+### 4. ¿Qué hacer si algo falla?
+
+- Si `npm` no se reconoce → cierra y vuelve a abrir la terminal (o reinicia el ordenador).
+- Si tienes una versión muy antigua de Node → desinstala e instala la LTS desde nodejs.org.
+- Si el puerto 5173 está ocupado → Vite te sugerirá otro puerto automáticamente.
 
 ## Estructura típica de un proyecto Vite + React
 
@@ -55,9 +91,9 @@ mi-app/
 
 ## Próximos pasos en este módulo
 
-1. Crear el proyecto.
-2. Modificar `App.jsx` para mostrar un mensaje personalizado.
-3. Entender cómo funciona el Hot Module Replacement (HMR).
+1. Tener el servidor corriendo (`npm run dev`).
+2. Modificar `src/App.jsx` y ver cómo se actualiza solo (HMR).
+3. Entender qué hace cada archivo.
 4. Añadir un segundo componente simple.
 
-¡Empieza y avisa cuando tengas el servidor corriendo!
+¡Cuando tengas el proyecto abierto en el navegador, avísame y seguimos!
